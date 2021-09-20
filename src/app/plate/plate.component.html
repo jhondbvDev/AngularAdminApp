@@ -1,0 +1,19 @@
+<div class="title">
+    <h1>Plates</h1>
+</div>
+<div>
+    <mat-form-field class="af-input" appearance="fill">
+        <mat-label>name, price ...</mat-label>
+        <input matInput type="text" [(ngModel)]="filter">
+        <button *ngIf="filter" matSuffix mat-icon-button aria-label="Clear" (click)="filter=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>
+
+<div class="food-card-container">
+    <div *ngFor="let plate of plates | filter:'id,name,price':filter" class="food-card">
+        <span>{{plate.name}}</span>
+        <span>${{plate.price}}</span>
+    </div>
+</div>

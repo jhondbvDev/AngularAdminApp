@@ -1,2 +1,25 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<div class="admin-food-container" [class.admin-food-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="admin-food-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Admin Food</h1>
+  </mat-toolbar>
+  <mat-sidenav-container class="admin-food-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav class="admin-food-sidenav-list-item" [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <mat-list-item  routerLink="plate">
+          
+            <mat-icon>restaurant</mat-icon>
+            Plates
+  
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

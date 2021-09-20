@@ -1,0 +1,98 @@
+{
+    "plates":[
+
+        {
+            "id": 1,
+            "name": "Burrito de carne",
+            "description": "Delicioso Burrito de carne de la casa",
+            "inputs": [
+                {
+                    "id": 4,
+                    "id_plate": 1,
+                    "id_input": 2,
+                    "quantity": 6
+                },
+                {
+                    "id": 1,
+                    "id_plate": 1,
+                    "id_input": 1,
+                    "quantity": 1
+                }
+            ],
+            "price": 14300.0
+        },
+        {
+            "id": 2,
+            "name": "Nachos-Carne",
+            "description": "Deliciosos nachos con carne",
+            "inputs": [
+                {
+                    "id": 3,
+                    "id_plate": 2,
+                    "id_input": 3,
+                    "quantity": 5
+                },
+                {
+                    "id": 2,
+                    "id_plate": 2,
+                    "id_input": 2,
+                    "quantity": 2
+                }
+            ],
+            "price": 30000.0
+        }
+        ,
+        {
+            "id": 2,
+            "name": "Nachos-Pollo",
+            "description": "Deliciosos nachos con pollo",
+            "inputs": [
+                {
+                    "id": 5,
+                    "id_plate": 2,
+                    "id_input": 3,
+                    "quantity": 5
+                },
+                {
+                    "id": 6,
+                    "id_plate": 2,
+                    "id_input": 2,
+                    "quantity": 2
+                }
+            ],
+            "price": 30000.0
+        },
+        {
+            "id": 2,
+            "name": "Sincronizada",
+            "description": "Tortilla con jamon pollo queso mozarella",
+            "inputs": [
+                {
+                    "id": 7,
+                    "id_plate": 2,
+                    "id_input": 3,
+                    "quantity": 5
+                },
+                {
+                    "id": 8,
+                    "id_plate": 2,
+                    "id_input": 2,
+                    "quantity": 2
+                },
+                {
+                    "id": 9,
+                    "id_plate": 2,
+                    "id_input": 3,
+                    "quantity": 5
+                },
+                {
+                    "id": 2,
+                    "id_plate": 2,
+                    "id_input": 2,
+                    "quantity": 2
+                }
+            ],
+            "price": 25000.0
+        }
+    ]
+}

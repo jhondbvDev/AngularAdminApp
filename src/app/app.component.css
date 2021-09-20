@@ -1,0 +1,62 @@
+.admin-food-toolbar {
+  background-image: linear-gradient(90deg, rgba(52,94,230,1) 27%, rgba(31,66,161,1) 59%, rgba(33,35,98,1) 85%);
+  padding: 1rem;
+  color: white;
+}
+
+.admin-food-toolbar h1 {
+  color: white;
+  margin-left: 3rem;
+}
+
+.admin-food-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.admin-food-sidenav-list-item {
+  width: 15rem;
+}
+
+.admin-food-is-mobile .admin-food-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.admin-food-app-name {
+  margin-left: 8px;
+}
+
+.admin-food-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+         causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.mat-icon{
+  margin-right: 10px;
+}
+
+
+
+.admin-food-is-mobile .admin-food-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+         `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.sidenav-content {
+  /* background-color: #e6e1e1; */
+  padding: 1rem 1rem 1rem 4rem;
+  ;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+ width: 200px;
+}
