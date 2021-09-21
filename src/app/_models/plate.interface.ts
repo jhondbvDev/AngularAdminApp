@@ -6,7 +6,7 @@ export interface IPlate{
     description:string;
     name:string;
     price:number;
-    inputPlates:Array<inputPlate>;
+    inputs:Array<inputPlate>;
 }
 
 export interface IPlates extends Array<IPlate>{
@@ -14,5 +14,5 @@ export interface IPlates extends Array<IPlate>{
     description:string;
     name:string;
     price:number;
-    inputPlates:Array<inputPlate>;
+    inputs:Array<inputPlate>;
 }

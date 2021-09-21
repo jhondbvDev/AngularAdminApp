@@ -28,3 +28,8 @@ input.right-align::-webkit-inner-spin-button {
   .div-button button{
       margin-right: 20rem;
   }
+
+  .price-input{
+    margin-top: 4px;
+    margin-left: 8px;
+  }

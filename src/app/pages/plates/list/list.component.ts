@@ -13,10 +13,11 @@ export class ListComponent implements OnInit {
   filter='';
   plates!:IPlates;
   constructor(private plateService:PlateService) { 
-    this.onLoadPlates();
+    
   }
 
   ngOnInit(): void {
+    this.onLoadPlates();
   }
 
   onLoadPlates():void{
