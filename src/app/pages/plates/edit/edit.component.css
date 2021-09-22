@@ -23,13 +23,15 @@ input.right-align::-webkit-inner-spin-button {
 
   .div-button{
     margin: 60px 0 0 0;
-    text-align: center;
-  }
-  .div-button button{
-      margin-right: 20rem;
+    justify-content: space-between;
+    display: flex;
   }
 
   .price-input{
     margin-top: 4px;
     margin-left: 8px;
+  }
+  .af-card{
+    margin-bottom: 30px;
+    width: 96%;
   }

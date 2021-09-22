@@ -14,31 +14,31 @@ export class PlateService {
 
   getPlates():Observable<any>{
    
-      return this.http.get<IPlate>(`/api/plates`) .pipe(
+      return this.http.get<IPlate>(`${environment.API_URL}/api/plates`) .pipe(
         catchError(err => this.handleError(err))
       )
    
   }
 
   getPlate(id:string){
-    return this.http.get<IPlate>(`/api/plates/${id}`) .pipe(
+    return this.http.get<IPlate>(`${environment.API_URL}/api/plates/${id}`) .pipe(
       catchError(err => this.handleError(err))
     )
   }
   createPlate(params:IPlate){
-   return this.http.post<IPlate>(`/api/plates`,params).pipe(
+   return this.http.post<IPlate>(`${environment.API_URL}/api/plates`,params).pipe(
     catchError(err => this.handleError(err))
    ) ;
   }
 
   updatePlate(params:IPlate){
-    return  this.http.put('/api/plates',params).pipe(
+    return  this.http.put(`${environment.API_URL}/api/plates`,params).pipe(
       catchError(err => this.handleError(err))
      );
   }
 
   deletePlate(id:string){
-    return this.http.delete(`/api/plates/${id}`).pipe(
+    return this.http.delete(`${environment.API_URL}/api/plates/${id}`).pipe(
       catchError(err => this.handleError(err))
     );
   }

@@ -2,35 +2,62 @@
     <h1>Plates</h1>
 </div>
 <p>Form Status: {{ plateForm.status }}</p>
-<form class="af-form" [formGroup]="plateForm"  autocomplete="off">
-    <div>
-        <mat-form-field class="af-form-item" appearance="outline">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Plate name" formControlName="name">
-            <mat-hint>put a name for your plate</mat-hint>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field class="af-form-item" appearance="outline">
-            <mat-label class="price-input">Price</mat-label>
-            <input matInput type="number" autocomplete="false" class="right-align" placeholder="0"  formControlName="price">
-            <mat-error *ngIf="plateForm.dirty && plateForm.get('price')?.touched && plateForm.get('price')?.errors?.min"> 
-                put a number greather than  
-            </mat-error>
-            <span matPrefix>$&nbsp;</span>
-            <mat-hint>put a price for your plate</mat-hint>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field class="af-form-item" appearance="outline">
-            <mat-label>Description</mat-label>
-            <textarea matInput placeholder="leave a commet" formControlName="description"></textarea>
-            <mat-hint>description for your plate</mat-hint>
-        </mat-form-field>
-    </div>
-    <div class="div-button">
-        <button mat-raised-button routerLink="/plates">Back</button>
-        <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
-        <button mat-raised-button color="primary" [disabled]="plateForm.invalid" (click)="onSubmit()"  >Save</button>
-    </div>
+
+<form class="af-form" [formGroup]="plateForm" autocomplete="off">
+   
+        <mat-card class="af-card">
+            <mat-card-header>
+               <h1>Plate</h1>  
+            </mat-card-header>
+            <mat-card-content>
+                <div>
+                    <mat-form-field class="af-form-item" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Plate name" formControlName="name">
+                        <mat-hint>put a name for your plate</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="af-form-item" appearance="outline">
+                        <mat-label class="price-input">Price</mat-label>
+                        <input matInput type="number" autocomplete="false" class="right-align" placeholder="0"
+                            formControlName="price">
+                        <mat-error
+                            *ngIf="plateForm.dirty && plateForm.get('price')?.touched && plateForm.get('price')?.errors?.min">
+                            put a number greather than 1
+                        </mat-error>
+                        <span matPrefix>$&nbsp;</span>
+                        <mat-hint>put a price for your plate</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="af-form-item" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput placeholder="leave a commet" formControlName="description"></textarea>
+                        <mat-hint>description for your plate</mat-hint>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+        <mat-card class="af-card">
+            <mat-card-header>
+             <h1>Inputs</h1>   
+            </mat-card-header>
+            <mat-card-content>
+                Inputs here!!!
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="div-button">
+                    <button mat-raised-button routerLink="/plates">Back</button>
+                    <button mat-raised-button color="warn" *ngIf="!isCreateMode" (click)="onDelete()">Delete</button>
+                    <button mat-raised-button color="primary" [disabled]="plateForm.invalid"
+                        (click)="onSubmit()">Save</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+
+
+
 </form>
