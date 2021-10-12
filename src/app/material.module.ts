@@ -9,6 +9,7 @@ import {MatButtonModule } from '@angular/material/button';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
+import {MatChipsModule} from '@angular/material/chips';
 
 const myModules =[MatToolbarModule,
     MatIconModule,
@@ -20,6 +21,7 @@ const myModules =[MatToolbarModule,
     MatPaginatorModule,
     MatGridListModule,
     MatListModule,
+    MatChipsModule
 
     
 ];

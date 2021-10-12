@@ -22,8 +22,8 @@ input.right-align::-webkit-inner-spin-button {
   }
 
   .div-button{
-    margin: 60px 0 0 0;
-    justify-content: space-between;
+    margin: 60px 0 60px 0;
+    justify-content: space-evenly;
     display: flex;
   }
 
